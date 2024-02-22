@@ -1,0 +1,79 @@
+{
+  "unknown": {
+    "settings": {
+      "goal": 0
+    },
+    "dictionary": {}
+  },
+  "Olena": {
+    "settings": {
+      "goal": 100
+    },
+    "dictionary": {
+      "first aid": [
+        {
+          "topic": "first aid",
+          "word": "ambulance",
+          "meaning": "a vehicle that takes people to and from hospitals",
+          "pos": "noun"
+        },
+        {
+          "topic": "first aid",
+          "word": "paramedic",
+          "meaning": "a person trained to give emergency medical treatment",
+          "pos": "noun"
+        },
+        {
+          "topic": "first aid",
+          "word": "unconscious",
+          "meaning": "lacking awareness and the capacity for sensory perception",
+          "pos": "adjective"
+        },
+        {
+          "topic": "first aid",
+          "word": "bandage",
+          "meaning": "a piece of soft material that covers and protects an injury",
+          "pos": "noun"
+        },
+        {
+          "topic": "first aid",
+          "word": "gauze",
+          "meaning": "a loosely woven, almost translucent fabric that's used to bandage wounds",
+          "pos": "noun"
+        }
+      ],
+      "health": [
+        {
+          "topic": "health",
+          "word": "treatment",
+          "meaning": "care provided to improve a situation",
+          "pos": "noun"
+        },
+        {
+          "topic": "health",
+          "word": "vaccine",
+          "meaning": "injection of weakened or dead microbes to create antibodies",
+          "pos": "noun"
+        },
+        {
+          "topic": "health",
+          "word": "vital",
+          "meaning": "performing an essential function in the living body",
+          "pos": "adjective"
+        },
+        {
+          "topic": "health",
+          "word": "therapy",
+          "meaning": "the act of providing treatment for an illness or disorder",
+          "pos": "noun"
+        },
+        {
+          "topic": "health",
+          "word": "immune system",
+          "meaning": "the cells in the body that work together to fight disease",
+          "pos": "noun"
+        }
+      ]
+    }
+  }
+}
