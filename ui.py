@@ -10,7 +10,7 @@ class UI:
         self.svc = svc
         self.root = tk.Tk()
         self.root.title("Words Learning App")
-        self.root.geometry("350x350")
+        self.root.geometry("350x320")
         self.main_window()
         self.content = None
 
@@ -125,7 +125,7 @@ class NewWord:
         self.topic_entry.grid(row=0, column=1, sticky="ew")
 
         # New Word
-        tk.Label(self.frame, text="New Word:").grid(row=1, column=0, sticky="w")
+        tk.Label(self.frame, text="New word:").grid(row=1, column=0, sticky="w")
         self.word_entry = tk.Entry(self.frame)
         self.word_entry.grid(row=1, column=1, pady=10, sticky="ew")
 
@@ -135,7 +135,7 @@ class NewWord:
         self.meaning_entry.grid(row=2, column=1, pady=10, sticky="ew")
 
         # Part of Speech
-        tk.Label(self.frame, text="Part of Speech:").grid(row=3, column=0, sticky="w")
+        tk.Label(self.frame, text="Part of speech:").grid(row=3, column=0, sticky="w")
         self.pos_entry = ttk.Combobox(self.frame, state="readonly")
         self.pos_entry['values'] = ("noun", "verb", "adjective", "adverb")
         self.pos_entry.set('noun')
@@ -182,7 +182,7 @@ class Practice:
             widget.destroy()
 
         # Topic Selection
-        tk.Label(self.frame, text="Choose Topic:").grid(row=0, column=0, sticky="w")
+        tk.Label(self.frame, text="Choose topic:").grid(row=0, column=0, sticky="w")
         self.topic_select = ttk.Combobox(self.frame, state="readonly", values=self.svc.get_sorted_topics())
         self.topic_select.grid(row=0, column=1, sticky="ew")
         # Attach an event handler to a widget,(name of the event, function that is called when the event occurs)
@@ -200,7 +200,7 @@ class Practice:
         next_button = tk.Button(self.frame, text="Next", command=self._load_random_meaning)
         next_button.grid(row=3, column=0, padx=20, pady=20, sticky="ws")
 
-        show_word_button = tk.Button(self.frame, text="Show Word", command=self._show_word)
+        show_word_button = tk.Button(self.frame, text="Show word", command=self._show_word)
         show_word_button.grid(row=3, column=1, padx=20, pady=20, sticky="es")
 
     def _load_random_meaning(self, event=None):
@@ -230,7 +230,7 @@ class Quiz:
             widget.destroy()
 
         # Topic Selection
-        tk.Label(self.frame, text="Choose Topic:").grid(row=0, column=0, sticky="w")
+        tk.Label(self.frame, text="Choose topic:").grid(row=0, column=0, sticky="w")
         self.topic_select = ttk.Combobox(self.frame, state="readonly", values=self.svc.get_sorted_topics())
         self.topic_select.grid(row=0, column=1, sticky="ew")
         self.topic_select.bind("<<ComboboxSelected>>", self.start_quiz)
@@ -245,8 +245,9 @@ class Quiz:
         self.buttons = []
         for i in range(3):
             choice_button = tk.Button(self.frame, command=lambda b=i: self.check_answer(b))
-            choice_button.grid(row=3 + i, column=1, sticky="ew")
+            choice_button.grid(row=3 + i, column=1, columnspan=2, sticky="ew")
             self.buttons.append(choice_button)
+        self.frame.columnconfigure(0, weight=1)
 
     def start_quiz(self, event=None):
         self.selected_topic = self.topic_select.get()

@@ -1,4 +1,3 @@
-
 from storage import DictItem, Database
 
 class Service:

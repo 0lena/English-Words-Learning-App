@@ -1,4 +1,3 @@
-
 import json
 
 class DictItem:
@@ -27,8 +26,6 @@ def item_to_dict(item):
     }
 
 class Database:
-    """Database is a class for user's database with settings and dictionary."""
-
     def __init__(self, filename):
         self._filename = filename
         self._data = {}
@@ -84,14 +81,8 @@ class Database:
             result.append(item_from_dict(word))
         return result
 
-    # Adds a new word to a topic in a user's dictionary
+    # Adds a new unique word to a topic in a user's dictionary
     def add_new_word(self, username, item):
-        """Add a new word to the user's dictionary.
-
-        Params:
-         - username - str, the name of the user
-         - item - DictItem, new words
-        """
         topic = self.get_topic(username, item.topic)
         for word in topic:
             if word["word"] == item.word:
