@@ -7,7 +7,7 @@
   },
   "Olena": {
     "settings": {
-      "goal": 30
+      "goal": 20
     },
     "dictionary": {
       "first aid": [
@@ -71,6 +71,32 @@
           "topic": "health",
           "word": "immune system",
           "meaning": "the cells in the body that work together to fight disease",
+          "pos": "noun"
+        },
+        {
+          "topic": "health",
+          "word": "unconscious",
+          "meaning": "lacking awareness and the capacity for sensory perception",
+          "pos": "noun"
+        },
+        {
+          "topic": "health",
+          "word": "prevent",
+          "meaning": "keep from happening or arising; make impossible",
+          "pos": "verb"
+        },
+        {
+          "topic": "health",
+          "word": "surgery",
+          "meaning": "medical practice that treats injuries or diseases by the physical removal of organs and tissues, involving cutting into the body",
+          "pos": "noun"
+        }
+      ],
+      "fruits": [
+        {
+          "topic": "fruits",
+          "word": "oranges",
+          "meaning": "a round juicy citrus fruit with a tough bright reddish-yellow rind",
           "pos": "noun"
         }
       ]
